@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Add Keywords</title>
+    <!-- Google Font - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER Section -->
+    <header class="header">
+        <div class="logo">
+            <img id= header_logo src="/static/images/TCS-logo-white.svg" alt="TCS Logo">
+        </div>
+        <nav class="navbar">
+            <a href="/" id="home-link" class="active">Home</a>
+            <a href="/options" id="options-link">Options</a>
+            <a href="/contact" id="contact-link">Contact</a>
+            <a href="https://www.tcs.com/" id="contact-link">About Us</a>
+        </nav>
+    </header>
+
+    <!-- ADD KEYWORDS Section -->
+<section class="section">
+    <div class="container_add_keywords">
+            <h1>Keyword Upload</h1>
+            <p>Drag and drop your keyword file below, or choose your files and then click the upload button. 
+                <br>(only excel files)</p>
+            <!-- Drag and Drop Zone -->
+            <div class="upload_keywords">
+                <form id="excel-upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" id="excel-files" accept=".csv, .xls, .xlsx" required>
+                    <button id="excel-upload-btn" type="submit" class="btn2">Upload</button>
+                </form>
+            </div>
+            <div id="drag-drop-excel-area" class="drag-drop-area">
+                <p>Drag and drop files here or <span id="browse-excel-files">browse</span></p>
+                <input type="file" id="drag-drop-excel-input" multiple hidden />
+            </div>
+            <!-- Progress Feedback -->
+            <!-- Progress Bar and Status Text -->
+            <div id="upload-status">
+                <progress id="progress-bar" value="0" max="100"></progress>
+                <div id="excel-progress-text"></div>
+            </div>
+                <a href="/specific_search" id="specific_search_btn" class="btn2">Move to specific search</a>
+                <p>The uploaded keyword files will be stored in an extra folder and won't be deleted</p>
+                
+                <div class="navigation_buttons">
+                    <button class="btn4" id="back_options-btn">Back</button>
+                </div>
+    </div>
+
+  
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>Copyright &copy; 2024 by TCS | All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/TataConsultancyServices/"><i class='bx bxl-facebook' ></i></a>
+            <a href="https://www.facebook.com/TataConsultancyServices/"><i class='bx bxl-twitter' ></i></a>
+            <a href="https://www.instagram.com/tcsglobal/?hl=en"><i class='bx bxl-instagram-alt' ></i></a>
+            <a href="https://www.linkedin.com/company/tata-consultancy-services/"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+</footer>
+</section>
+
+    <!-- JavaScript -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

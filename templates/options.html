@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Literature Search Tool</title>
+    <!-- Google Font - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons for icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER Section -->
+    <header class="header">
+        <div class="logo">
+            <img id= header_logo src="/static/images/TCS-logo-white.svg" alt="TCS Logo">
+        </div>
+        <nav class="navbar">
+            <a href="/" id="home-link" class="active">Home</a>
+            <a href="/options" id="options-link">Options</a>
+            <a href="/contact" id="contact-link">Contact</a>
+            <a href="/help" id="contact-link">Help</a>
+            <a href="https://www.tcs.com/" id="contact-link">About Us</a>
+        </nav>
+    </header>
+
+    <!-- OPTIONS Section -->
+<section class="section">
+    <div id="options_main_container">
+    <!-- Section Title -->
+            <h1>What do you want to do?</h1>
+    
+            <!-- Cards Container -->
+            <div class="options_container">
+                <!-- Standard Search Card -->
+                <div class="options_box">
+                    
+                        <h3>Standard Search</h3>
+                        <p>Searching for patient identifiers / Drug Names / Symptoms & Diseases / Special Situations</p>
+                        <a href="/standard_search" class="btn2">Search now!</a>
+                    
+                </div>
+                <!-- Specific Search Card -->
+                <div class="options_box">
+                   
+                        <h3>Specific Search</h3>
+                        <p>Searching for one of patient identifiers / Drug Names / Symptoms & Diseases / Special Situations</p>
+                        <a href="/specific_search" class="btn2">Specific search</a>
+                    
+                </div>
+                <!-- Add Keywords Card -->
+                <div class="options_box">
+                    
+                        <h3>Add Search Terms</h3>
+                        <p>Upload your own files with new keywords</p>
+                        <a href="/add_keyword" class="btn2">Go to Add Keywords</a>
+                    
+                </div>
+                <!-- Single Word Search Card -->
+                <div class="options_box">
+             
+                        <h3>Quick Search</h3>
+                        <p>Quick search with a single keyword</p>
+                        <a href="/quick_search" class="btn2">Quick search</a>
+         
+                </div>
+                <!-- AI Chat Search Card -->
+                <div class="options_box">
+              
+                        <h3>AI Chat Search</h3>
+                        <p>Talk with AI and ask specific questions regarding your Literature<br> **Coming soon**</p>
+                        <a href="/ai" class="btn2">Go to AI Chat</a>
+                    
+                </div>
+                <!-- Future Card -->
+                <div class="options_box">
+                    
+                        <h3>Future updates</h3>
+                        <p>Additional functions, bugfixes and improvements.</p>
+                        <a href="/future" class="btn2"> Future updates</a>
+                   
+                </div>
+            </div>
+            <div class="navigation_buttons">
+                <button class="btn4" id="home-btn">Back to Upload</button>
+            </div>
+    </div>
+   
+
+    </section>
+    
+
+
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>Copyright &copy; 2024 by TCS | All Rights Reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/TataConsultancyServices/"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.facebook.com/TataConsultancyServices/"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/tcsglobal/?hl=en"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.linkedin.com/company/tata-consultancy-services/"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+    </footer>
+
+        <!-- JavaScript -->
+        <!-- Link to external JavaScript file -->
+        <script src="/static/script.js"></script>
+    </section>
+</body>
+</html>

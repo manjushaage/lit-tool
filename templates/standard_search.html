@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Home - Literature Search Tool</title>
+    <!-- Google Font - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img id="header_logo" src="/static/images/TCS-logo-white.svg" alt="TCS Logo">
+        </div>
+        <nav class="navbar">
+            <a href="/" id="home-link" class="active">Home</a>
+            <a href="/options" id="options-link">Options</a>
+            <a href="/contact" id="contact-link">Contact</a>
+            <a href="/help" id="help-link">Help</a>
+            <a href="https://www.tcs.com/" id="about-us-link">About Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="section">
+        <div class="standard_Search_container">
+            <h2>Standard Search <i class='bx bx-file-find'></i></h2>
+            <h3>Current uploaded PDFs</h3>
+            <!-- PDF Shower -->
+            <div class="pdf-list">
+                <ul>
+                    {% for pdf in pdfs %}
+                    <li>{{ pdf }}</li>
+                    {% endfor %}
+                </ul>
+                {% if not pdfs %}
+                <p>No PDFs found.</p>
+                {% endif %}
+            </div>
+
+            <!-- Search Button -->
+            <div class="buttons">
+                <button id="standard_search_btn" class="btn3">Search</button>
+            </div>
+
+            <!-- Progress Bar and Status Text -->
+            <div id="upload-status">
+                <progress id="progress-bar" value="0" max="100"></progress>
+                <div id="progress-text"></div>
+            </div>
+
+            <p>Download the finished files here:</p>
+            <a href="/download_all_highlighted" class="btn" download>Download Highlighted PDFs</a>
+        
+
+        <!-- Standard Search Term Colors -->
+        <p>Standard search term colors are as following:</p>
+        <ul>
+            <li>Specific Drug names for your company -> <mark id="mark_green">Green</mark></li>
+            <li>Patient identifiers -> <mark id="mark_blue">Blue</mark></li>
+            <li>Diseases and Symptoms -> <mark id="mark_yellow">Yellow</mark></li>
+            <li>General AE terms and Special Situations (Life threatening etc.) -> <mark id="mark_red">Red</mark></li>
+        </ul>
+
+        <!-- Clear Uploaded Files -->
+        <form action="/clear_uploaded_files" method="post">
+            <button type="submit" class="btn2">Clear Uploaded Files</button>
+        </form>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+        <div class="navigation_buttons">
+            <button class="btn4" id="back_options-btn">Back</button>
+        </div>
+</div>
+      
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright &copy; 2024 by TCS | All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/TataConsultancyServices/"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.facebook.com/TataConsultancyServices/"><i class='bx bxl-twitter'></i></a>
+            <a href="https://www.instagram.com/tcsglobal/?hl=en"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.linkedin.com/company/tata-consultancy-services/"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

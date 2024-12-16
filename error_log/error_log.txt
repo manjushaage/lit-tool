@@ -1,0 +1,19 @@
+2024-12-13 16:35:23.963105 - Error reading Disease_Symptoms.csv: 'int' object has no attribute 'strip'
+2024-12-13 16:35:23.964177 - Error reading Disease_Symptoms.csv: 'int' object has no attribute 'strip'
+2024-12-13 17:04:40.430230 - not enough values to unpack (expected 4, got 3)
+2024-12-13 17:04:41.070007 - not enough values to unpack (expected 4, got 3)
+2024-12-13 17:07:03.422531 - Unexpected error processing 1-s2.0-S1836955321000813-main.pdf: 'tuple' object has no attribute 'lower'
+2024-12-14 09:24:24.639948 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 09:52:16.015385 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 09:53:38.619317 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 09:53:58.928620 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 09:55:25.374057 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 10:07:40.905481 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 10:09:45.444605 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 10:11:24.778937 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 10:37:18.280591 - Error loading keywords from drugs.csv: 'charmap' codec can't decode byte 0x81 in position 248: character maps to <undefined>
+2024-12-14 15:04:02.372474 - Error loading keywords from drugs_jp.csv: 'charmap' codec can't decode byte 0x81 in position 8: character maps to <undefined>
+2024-12-14 19:23:57.589396 - Error saving highlighted PDF highlighted_pdfs\test_excel_for_upload.xlsx: 
+2024-12-14 19:23:57.589895 - Error processing test_excel_for_upload.xlsx: Could not save highlighted PDF for test_excel_for_upload.xlsx.
+2024-12-15 12:45:51.616927 - Error loading keywords from uploaded_keywords\test_excel_for_upload.xlsx: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte
+2024-12-15 12:48:29.120223 - Error loading keywords from uploaded_keywords\test_excel_for_upload.xlsx: 'utf-8' codec can't decode bytes in position 15-16: invalid continuation byte

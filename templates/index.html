@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Literature Search Tool</title>
+    <!-- Google Font - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img id= "header_logo" src="/static/images/TCS-logo-white.svg" alt="TCS Logo">
+        </div>
+        <nav class="navbar">
+            <a href="/" id="home-link" class="active">Home</a>
+            <a href="/options" id="options-link">Options</a>
+            <a href="/contact" id="contact-link">Contact</a>
+            <a href="/help" id="help-link">Help</a>
+            <a href="https://www.tcs.com/" id="about_us-link">About Us</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+<section class="section">
+    <div class="upload_area">
+        <h1>Literature Search <i class='bx bxs-book-bookmark' ></i></h1>
+        <h3>Please upload your PDFs</h3>
+            <div class="form_content_center">
+                <form id="pdf-upload" method="POST" enctype="multipart/form-data">
+                    <input type="file" name="file" id="files" accept=".pdf" multiple required>
+                    <button id="pdf-upload-btn" type="submit" class="btn2">Upload PDF</button>
+                </form>
+                <br>
+                <p> Please note: When uploading new pdf files, previously uploaded PDFs will be cleared !</p>
+                <!-- DRAG AND DROP AREA -->
+                <div id="drag-drop-area" class="drag-drop-area">
+                    <p>Drag and drop files here or <span id="browse-files">browse</span></p>
+                    <input type="file" id="file-input" multiple hidden />
+                </div>
+
+                <!-- Upload Button & Search Button-->
+                <div id="upload-status"></div>
+                    <div class="buttons">
+                        <!-- Next Button -->
+                        <button class="btn" id="next-btn">Next step</button>
+                    </div>
+            </div>
+                <div id="progress_bar_container">
+                    <progress id="progress-bar" value="0" max="100"></progress>
+                    <div id="progress-text"></div>
+                </div>
+                <h2>For more information please check out the Help page</h2>
+    </div>
+         
+    <!-- Footer -->
+    <footer class="footer">
+            <p>Copyright &copy; 2024 by TCS | All Rights Reserved.</p>
+            <div class="social-media">
+                <a href="https://www.facebook.com/TataConsultancyServices/"><i class='bx bxl-facebook' ></i></a>
+                <a href="https://www.facebook.com/TataConsultancyServices/"><i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/tcsglobal/?hl=en"><i class='bx bxl-instagram-alt' ></i></a>
+                <a href="https://www.linkedin.com/company/tata-consultancy-services/"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+    </footer>
+</section>
+
+    <!-- Scripts -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
+

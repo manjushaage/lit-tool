@@ -1,0 +1,37 @@
+Lit tool Version:
+Base version 
+- 1 page Website with upload and search function.
+
+
+Version 1.1 - 
+- Added Options page for future and contact page for feedback
+
+
+
+Version 1.2 
+- added Japanese language search capability
+
+
+
+Version 1.2.1 
+- overall improvements
+- keyword list refinments
+- color refinments
+
+
+
+Version 1.2.2 
+- Added specific search - pdfs can be searched with selected keyword lists (included user uploaded)
+- Fixed and improved standard search
+- Added future updates page
+- Added Help page
+- Added Add search terms page with excel upload
+- Added update log to app
+
+(Code changes):
+- changed pre load keywords
+
+Version 1.2.3
+- Fix Quick search
+- Add AI Chat
+- Testing

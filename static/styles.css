@@ -1,0 +1,579 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --bg-color: #252E37;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #EAB731;
+    --accent-color: #3AAFA9;
+}
+
+html{
+    font-size: 100%
+}
+
+body {
+    height: 100%;
+    overflow: hidden;
+    line-height: 1.5;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+i {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    
+}
+
+hr {
+    border: 1px solid white; /* Set a white border */
+    width: 60vh;
+}
+
+li {
+    font-size: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--main-color);
+}
+h2 {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+h3 { 
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+/* yellow button */
+.btn {
+    padding: 1rem 2.8rem;
+    background-color: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1rem;
+    color: var(--second-bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+/* dark button */
+.btn2 { 
+    padding: 1rem 2.8rem;
+    background-color: var(--bg-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1rem;
+    color: var(--main-color);
+    border-color: var(--main-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+.btn3{
+    padding: 1rem 2.8rem;
+    background-color: var(--bg-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1rem;
+    color: var(--main-color);
+    border-color: var(--main-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.btn4{
+    padding: 1rem 2.8rem;
+    background-color: var(--bg-color);
+    border-radius: 4rem;
+    border-color: var(--main-color);
+    border-style: solid;
+    font-size: 1rem;
+    color: var(--main-color);
+    
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.btn2:hover { 
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+.btn3:hover { 
+    background-color: var(--main-color);
+    color: var(--bg-color);
+}
+.btn3{
+    cursor: pointer;
+    animation: wobble 1s infinite; /* Attach the wobble animation */
+}
+
+@keyframes wobble {
+    0%, 100% { transform: translateY(0); }  /* Start and end position */
+    25% { transform: translateY(-5px); }   /* Move up */
+    50% { transform: translateY(5px); }    /* Move down */
+    75% { transform: translateY(-5px); }   /* Move up again */
+}
+
+.navigation_buttons{
+    position: fixed;
+    bottom: 10rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    height: 5rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0rem 2.5rem 0rem 2.5rem;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+#header_logo {
+    width:10rem;
+    height: auto;
+    display: block; /* Ensures no inline spacing issues */
+}
+
+.navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-right: 6rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--second-bg-color);
+    padding: 1rem 2.5rem;
+    bottom: 0;
+    width: 100%;
+    max-height: 5rem;
+}
+
+.footer p {
+    font-size: 1.2rem;
+}
+
+.social-media {
+    margin-right: 4rem;
+}
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 1rem;
+    color: var(--main-color);
+    margin: 1rem 1rem 1rem 0;
+    transition: .5s ease;
+
+}
+.social-media a:hover{
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+.form_content_center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    margin: 3.5rem;
+}
+
+
+
+/* Home - Upload page */
+
+.upload_area{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 10rem;
+    gap:1.5rem;
+}
+
+/* Drag and Drop Area */
+
+.drag-drop-area {
+    width: 50rem; /* Adjust as needed */
+    height: 10rem;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px dashed var(--main-color); /* Dashed border */
+    border-radius: 10px;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.drag-drop-area:hover {
+    background-color: var(--main-color);
+    color: var(--second-bg-color);
+}
+
+.drag-drop-area.dragover {
+    background-color: rgba(234, 183, 49, 0.2);
+}
+
+#browse-files {
+    color: var(--main-color);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#mark_green{
+    background-color: green;
+}
+#mark_blue{
+    background-color: rgb(0, 229, 229);
+}
+#mark_red{
+    background-color: red;
+}
+
+/* Progress Bar */
+#progress-bar {
+    width: 100%; /* Half the screen width */
+    height: 5px; /* Set the desired height */
+    align-self: center;
+    background-color: #e0e0e0; /* Background color */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#progress-text {
+    font-size: 2.5rem;
+    align-self: center;
+}
+
+#progress_bar_container {
+    width: 50%;
+    height: 4rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#help_prompt {
+    color: var(--main-color);
+    margin-bottom: 15rem;
+}
+
+
+/* Options Page */
+
+#options_main_container {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cards Container */
+.options_container {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    justify-content: center;
+    width: 75%;
+    height: 40%;
+    gap: 2.5rem;
+}
+
+/* Individual Card */
+.options_box {
+    position: relative;
+    margin: 0;
+    bottom: 0;
+    left: 0; 
+    background: var(--second-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 4rem;
+    gap: 1.5rem;
+    transform: translateY(5%);
+    transition: .5s ease; 
+    border: 2px solid var(--bg-color); /* Add border width and style */
+}
+
+.options_box:hover {
+    border-color: var(--main-color); /* Change border color on hover */
+    transform: scale(1.02);
+}
+
+.options_box p {
+    font-size: 1.2rem;
+    margin: 1rem 0 3rem;
+} 
+
+.options_box h3{
+        font-size: 2rem;
+        color: var(--main-color);
+    }
+
+
+
+
+/* Standard Search Page */
+.standard_Search_container {
+    margin-top: 5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    gap: 2.5rem;
+    margin: auto;
+}
+
+.pdf-list {
+    max-height: calc(10 * 2em + 45px); /* Adjust height for max 10 rows */
+    overflow-y: auto; /* Scroll if there are more than 10 rows */
+}
+
+.flash-messages{
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+/* contact form */
+
+.contact_container{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_container span {
+    color: var(--main-color);
+}
+#contact_form {
+    max-width: 35rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+#contact_form .input-box { 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contact_form .input-box input,
+#contact_form textarea {
+width: 100%;
+padding: 1.5rem;
+font-size: 1.6rem;
+color: var(--text-color);
+background: var(--second-bg-color);
+border-radius: .8rem;
+margin-top: .7rem;
+margin-bottom: 1.5rem;
+} 
+
+#contact_form .input-box input {
+    width: 100%;
+}
+#contact_form textarea {
+    resize: none;
+}
+
+#contact_h2 {
+    color: var(--text-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add_keyword page */
+
+.container_add_keywords {
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; 
+    justify-content: space-evenly; 
+    gap: 2.5rem;
+    position: relative; /* Ensures proper positioning within the page */
+    top: 5rem; 
+    bottom: 5rem;
+    width: 100%; 
+    height: 100%;
+    padding: 10rem;
+    /* height: calc(100vh - 80px); Fill the remaining viewport height below the header */
+}
+
+
+#excel-progress-text {
+font-size: 2rem;
+align-self: center;
+}
+
+.help_page {
+    display:flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+    padding: 20rem;
+}
+#FAQ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Specific search page */
+
+.Specific_search_container{
+    padding: 5rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2.5rem;
+}
+#excel_form{
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 25rem;
+    overflow-y: scroll;
+}
+
+
+
+/* Quick Search */
+
+#quick_search_container{
+    margin-top: 5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+
+
+/* Future updates page */
+
+#future_container{
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2rem;
+    margin: auto;
+}
+
+#ai_container{
+    position: relative;
+    padding:10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 5rem;
+}
